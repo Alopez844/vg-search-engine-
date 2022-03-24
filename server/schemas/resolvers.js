@@ -39,7 +39,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
           },
-          saveBook: async (parent, { videoGameData }, context) => {
+          saveVideoGame: async (parent, { videoGameData }, context) => {
             if (context.user) {
               const updatedUser = await User.findByIdAndUpdate(
                 { _id: context.user._id },
@@ -52,7 +52,7 @@ const resolvers = {
       
             throw new AuthenticationError('You need to be logged in!');
           },
-          removeBook: async (parent, { videoGameId }, context) => {
+          removeVideoGame: async (parent, { videoGameId }, context) => {
             if (context.user) {
               const updatedUser = await User.findOneAndUpdate(
                 { _id: context.user._id },
