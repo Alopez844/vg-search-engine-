@@ -1,10 +1,11 @@
-  {
+{
   "name": "vg-search-engine-",
   "description": "",
   "version": "1.0.0",
   "main": "server/server.js",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.15"
   },
   "dependencies": {
     "apollo-server-express": "^2.15.0"
@@ -26,5 +27,4 @@
     "url": "https://github.com/Alopez844/vg-search-engine-/issues"
   },
   "homepage": "https://github.com/Alopez844/vg-search-engine-#readme"
-  
 }
