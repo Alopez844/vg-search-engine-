@@ -253,6 +253,6 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Games',
-    href: '/games'
-  }
+    href:'/games'
+  },
 ];
