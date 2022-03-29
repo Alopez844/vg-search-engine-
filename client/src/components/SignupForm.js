@@ -5,6 +5,7 @@ import {
   FormLabel,
   Input,
   InputGroup,
+  HStack,
   InputRightElement,
   Stack,
   Button,
@@ -16,7 +17,7 @@ import {
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 
-export default function SignUpForm() {
+export default function SignupForm() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -40,12 +41,14 @@ export default function SignUpForm() {
           boxShadow={'lg'}
           p={8}>
           <Stack spacing={4}>
+            <HStack>
               <Box>
                 <FormControl id="username" isRequired>
                   <FormLabel>Username</FormLabel>
                   <Input type="text" />
                 </FormControl>
               </Box>
+            </HStack>
             <FormControl id="email" isRequired>
               <FormLabel>Email address</FormLabel>
               <Input type="email" />
@@ -79,7 +82,7 @@ export default function SignUpForm() {
             </Stack>
             <Stack pt={6}>
               <Text align={'center'}>
-                Already a user? <Link color={'blue.400'}>Login</Link>
+                Already a user? <Link href='/LoginForm' color={'blue.400'}>Login</Link>
               </Text>
             </Stack>
           </Stack>
