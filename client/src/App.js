@@ -1,22 +1,19 @@
-
+import Navbar from "./components/Navbar/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Profile from "./components/Profile/Profile";
+import Games from "./components/Games/Games";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Navbar />
+        <Routes>
+          <Route exact path="/profile" element={<Profile/>}/>
+          <Route exact path="/games" element={<Games/>}/>
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
