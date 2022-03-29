@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Image, Box, Badge } from "@chakra-ui/react";
+import { Stack, HStack, VStack, StackDivider } from '@chakra-ui/react'
 import {useQuery } from '@apollo/client'; 
 import {QUERY_ME} from "../../utils/queries"; 
 
@@ -10,20 +11,26 @@ function Profile() {
 // const userInfo = data?.me || {}; 
 // console.log(userInfo);
   return (
-    <div>
-      Profile
-      <Box>
-        <Image
-          boxSize="150px"
-          objectFit="cover"
-          src="https://bit.ly/dan-abramov"
-          alt={userInfo.name}
-        />
-        <Badge borderRadius="full" px="2" colorScheme="teal">
+<VStack
+  divider={<StackDivider borderColor='gray.200' />}
+  spacing={100}
+  align='stretch'
+>
+  <Box h='40px' bg='yellow.200'>John Doe
+  <Image boxSize='200px' src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
+          <Badge borderRadius="full" px="2" colorScheme="teal">
           {/* {userInfo.username.toUpperCase()} */}
         </Badge>
-      </Box>
-    </div>
+  </Box>
+
+  <Box h='40px' bg='white'>
+    About Me
+  </Box>
+
+  <Box h='40px' bg='White'>
+    Favorite Games
+  </Box>
+</VStack>
   );
 }
 
