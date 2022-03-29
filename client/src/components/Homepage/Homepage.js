@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Image, StarIcon, Badge } from '@chakra-ui/react'
 import { Stack, HStack, VStack } from "@chakra-ui/react";
 
-function Games() {
+function Homepage() {
     const card01 = {
       imageUrl: 'https://cdn.akamai.steamstatic.com/steam/apps/976730/capsule_616x353.jpg?t=1634144453',
       title: 'Halo',
@@ -14,7 +14,7 @@ function Games() {
         imageUrl:'https://upload.wikimedia.org/wikipedia/en/thumb/d/dc/Resident_Evil_3.jpg/220px-Resident_Evil_3.jpg',
         title: 'Resident Evil 3',
         reviewCount: 34,
-        rating: 4.5
+        rating: 4,
       }
   
       const card03 = {
@@ -96,4 +96,5 @@ function Games() {
   );
 }
 
-export default Games;
+
+export default Homepage;
