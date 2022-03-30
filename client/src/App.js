@@ -12,6 +12,7 @@ function App() {
     <BrowserRouter>
       <div>
         <Navbar />
+        <Homepage/>
         <Routes>
           <Route exact path="/profile" element={<Profile/>}/>
           <Route exact path="/games" element={<Games/>}/>
