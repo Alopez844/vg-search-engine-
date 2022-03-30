@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Image, Box, Badge, Flex } from "@chakra-ui/react";
-import { VStack, StackDivider } from "@chakra-ui/react";
+import { VStack, Grid, GridItem, StackDivider } from "@chakra-ui/react";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME } from "../../utils/queries";
 
