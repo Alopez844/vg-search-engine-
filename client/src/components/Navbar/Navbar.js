@@ -127,9 +127,6 @@ export default function WithSubnavigation({token}) {
                     ml="2"
                   >
                     <Text fontSize="sm">Justina Clark</Text>
-                    <Text fontSize="xs" color="gray.600">
-                      Admin
-                    </Text>
                   </VStack>
                   <Box display={{ base: "none", md: "flex" }}>
                     <FiChevronDown />
