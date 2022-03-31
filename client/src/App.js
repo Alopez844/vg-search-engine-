@@ -12,7 +12,7 @@ import Homepage from "./components/Homepage/Homepage";
 import Footer from "./components/Homepage/Footer"
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
-import Homepage from "./components/Homepage/Homepage"
+
 
 const client = new ApolloClient({ 
   request: (operation) => {
