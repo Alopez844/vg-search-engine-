@@ -12,6 +12,7 @@ import Homepage from "./components/Homepage/Homepage";
 import Footer from "./components/Homepage/Footer"
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
+<<<<<<< HEAD
 
 
 const client = new ApolloClient({ 
@@ -26,6 +27,8 @@ const client = new ApolloClient({
   },
   uri: '/graphql',
 });
+=======
+>>>>>>> origin/so-profile
 
 
 function App() {
@@ -36,7 +39,11 @@ function App() {
       <div>
         <Navbar />
         <Routes>
+<<<<<<< HEAD
           <Route exact path="/homepage" element={<Homepage/>}/>
+=======
+          <Route exact path="/" element={<Homepage/>}/>
+>>>>>>> origin/so-profile
           <Route exact path="/profile" element={<Profile/>}/>
           <Route exact path="/games" element={<Games/>}/>
           <Route exact path="/LoginForm" element={<LoginForm/>}/>
@@ -49,5 +56,4 @@ function App() {
     </ApolloProvider>
   );
 }
-
 export default App;
