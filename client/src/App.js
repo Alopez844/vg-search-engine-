@@ -6,7 +6,6 @@ import Profile from "./components/Profile/Profile";
 import Games from "./components/Games/Games";
 
 import Homepage from "./components/Homepage/Homepage";
-import { ChakraProvider } from "@chakra-ui/react"
 import Footer from "./components/Homepage/Footer"
 import LoginForm from "./components/LoginForm";
 
