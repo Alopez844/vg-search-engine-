@@ -8,6 +8,7 @@ import { ApolloProvider } from "@apollo/react-hooks";
 import  ApolloClient  from "apollo-boost";
 
 
+import Homepage from "./components/Homepage/Homepage";
 import Footer from "./components/Homepage/Footer"
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
