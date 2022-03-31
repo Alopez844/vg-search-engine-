@@ -10,6 +10,7 @@ import Homepage from "./components/Homepage/Homepage";
 import Footer from "./components/Homepage/Footer"
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
+import FriendProfile from "./components/FriendProfile/FriendProfile";
 
 const client = new ApolloClient({ 
   request: (operation) => {
@@ -31,12 +32,13 @@ function App() {
     <ChakraProvider>
     <BrowserRouter>
       <div>
-        <Navbar />
+        <Navbar token={true} />
         <Routes>
           <Route exact path="/" element={<Homepage/>}/>
           <Route exact path="/profile" element={<Profile/>}/>
           <Route exact path="/LoginForm" element={<LoginForm/>}/>
           <Route exact path="/SignupForm" element={<SignupForm/>}/>
+          <Route exact path="/FriendProfile/:id" element={<FriendProfile/>}/>
         </Routes>
         <Footer />
       </div>
