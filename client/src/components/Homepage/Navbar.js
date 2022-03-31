@@ -252,6 +252,10 @@ const NAV_ITEMS: Array<NavItem> = [
     href:'/homepage'
   },
   {
+    label: 'Profile',
+    href:'/profile'
+  },
+  {
     label: 'Games',
     href:'/games'
   },

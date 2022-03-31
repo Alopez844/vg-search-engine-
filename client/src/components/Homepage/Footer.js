@@ -9,7 +9,12 @@ import {
   
   export default function SmallWithNavigation() {
     return (
-      <Box
+      <div style={{
+        position: "fixed",
+        left: 0,
+        bottom: 0,
+        right: 0,
+      }} ><Box
         bg={useColorModeValue('gray.50', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')}>
         <Container
@@ -21,11 +26,12 @@ import {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
           <Stack direction={'row'} spacing={6}>
-            <Link href={'/homepage'}>Home</Link>
+            <Link href={'/profile'}>Profile</Link>
             <Link href={'/games'}>Games</Link>
         </Stack>
           <Text>© 2020 Video Game SE. All rights reserved</Text>
         </Container>
       </Box>
+      </div>
     );
   }
