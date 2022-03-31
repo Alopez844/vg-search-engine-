@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   Image,
+  Heading,
   Box,
   Badge,
   Flex,
@@ -24,6 +25,10 @@ import { FiBell, FiChevronDown } from "react-icons/fi";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME } from "../../utils/queries";
 import Friend from "./Friend";
+import Game01 from "../Games/Game01"
+import Game02 from "../Games/Game02"
+import Game03 from "../Games/Game03"
+
 
 const UserImage = ({ pic, name }) => (
   <Image src={pic || "https://bit.ly/dan-abramov"} alt={name} boxSize={200} />
@@ -85,8 +90,6 @@ function Profile() {
                 borderColor={useColorModeValue("gray.200", "gray.700")}
               >
                 <MenuItem>Profile</MenuItem>
-                <MenuItem>Settings</MenuItem>
-                <MenuItem>Billing</MenuItem>
                 <MenuDivider />
                 <MenuItem>Sign out</MenuItem>
               </MenuList>
@@ -96,19 +99,26 @@ function Profile() {
 
         <HStack>
           <Box h="40px" bg="white">
-          <Text fontSize="4xl">Games</Text>
+            <Heading fontSize="4xl">Games</Heading>
+            <HStack>
+              <Game01 />
+              <Spacer />
+              <Game02 />
+              <Spacer />
+              <Game03 />
+            </HStack>
           </Box>
         </HStack>
 
         <HStack>
           <Box h="40px" bg="White">
-            <Text fontSize="4xl">Friends</Text>
+            <Heading fontSize="4xl">Friends</Heading>
             <HStack>
-            <Friend />
-            <Spacer />
-            <Friend />
-            <Spacer />
-            <Friend />
+              <Friend />
+              <Spacer />
+              <Friend />
+              <Spacer />
+              <Friend />
             </HStack>
           </Box>
         </HStack>

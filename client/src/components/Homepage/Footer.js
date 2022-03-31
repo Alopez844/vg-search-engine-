@@ -6,6 +6,8 @@ import {
     Link,
     useColorModeValue,
   } from '@chakra-ui/react';
+  import {Link as RouterLink} from "react-router-dom"
+
   
   export default function SmallWithNavigation() {
     return (
@@ -26,8 +28,8 @@ import {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
           <Stack direction={'row'} spacing={6}>
-            <Link href={'/profile'}>Profile</Link>
-            <Link href={'/games'}>Games</Link>
+            <Link as={RouterLink} to={'/'}>Home</Link>
+            <Link as={RouterLink} to={'/profile'}>Profile</Link>
         </Stack>
           <Text>© 2020 Video Game SE. All rights reserved</Text>
         </Container>
