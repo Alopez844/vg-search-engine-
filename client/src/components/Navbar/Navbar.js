@@ -74,19 +74,15 @@ export default function WithSubnavigation() {
             fontSize={'sm'}
             fontWeight={400}
             variant={'link'}
-            href={'#'}>
+            href={'/LoginForm'}>
             Sign In
           </Button>
           <Button
-            display={{ base: 'none', md: 'inline-flex' }}
+            as={'a'}
             fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'pink.400'}
-            href={'#'}
-            _hover={{
-              bg: 'pink.300',
-            }}>
+            fontWeight={400}
+            variant={'link'}
+            href={'/SignupForm'}>
             Sign Up
           </Button>
         </Stack>
