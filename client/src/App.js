@@ -8,6 +8,7 @@ import Games from "./components/Games/Games";
 import Homepage from "./components/Homepage/Homepage";
 import Footer from "./components/Homepage/Footer"
 import LoginForm from "./components/LoginForm";
+import SignupForm from "./components/SignupForm";
 
 
 function App() {
@@ -17,9 +18,11 @@ function App() {
       <div>
         <Navbar />
         <Routes>
+          <Route exact path="/" element={<Homepage/>}/>
           <Route exact path="/profile" element={<Profile/>}/>
           <Route exact path="/games" element={<Games/>}/>
           <Route exact path="/LoginForm" element={<LoginForm/>}/>
+          <Route exact path="/SignupForm" element={<SignupForm/>}/>
         </Routes>
         <Footer />
       </div>
@@ -27,5 +30,4 @@ function App() {
     </ChakraProvider>
   );
 }
-
 export default App;
