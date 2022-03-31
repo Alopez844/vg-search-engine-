@@ -24,19 +24,21 @@ import {
 import { FiBell, FiChevronDown } from "react-icons/fi";
 import { useQuery } from "@apollo/client";
 import { QUERY_ME } from "../../utils/queries";
-import Friend001 from "./Friend001";
-import Friend002 from "./Friend002";
-import Friend003 from "./Friend003";
+import Friend001 from "../Profile/Friend001";
+import Friend002 from "../Profile/Friend002";
+import Friend003 from "../Profile/Friend003";
 import Game01 from "../Games/Game01"
 import Game02 from "../Games/Game02"
 import Game03 from "../Games/Game03"
+import Profile from "../Profile/Profile";
+import OriginalFriend from "../Profile/OriginalFriend";
 
 
 const UserImage = ({ pic, name }) => (
   <Image src={pic || "https://bit.ly/dan-abramov"} alt={name} boxSize={200} />
 );
 
-function Profile() {
+function FriendProfile001() {
   // const {loading ,data} = useQuery(QUERY_ME);
 
   const [userInfo, setUserInfo] = useState({ name: "John Doe" });
@@ -55,11 +57,11 @@ function Profile() {
                     mr={3}
                     size={"lg"}
                     src={
-                      "https://images.unsplash.com/photo-1619946794135-5bc917a27793?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
+                      "https://bit.ly/dan-abramov"
                     }
                   />
                   <Flex direction="column" >
-                    <Heading>Justina Doe</Heading>
+                    <Heading>John Doe</Heading>
                     <Text>About Me</Text>
                   </Flex>
         </HStack>
@@ -68,11 +70,11 @@ function Profile() {
           <Box w="100%" align="center" direction="column" h="400px" bg="white">
             <Heading mb={4} fontSize="4xl">Games</Heading>
             <HStack w="75%" justify="center">
-              <Game01 />
-              <Spacer />
               <Game02 />
               <Spacer />
               <Game03 />
+              <Spacer />
+              <Game01 />
             </HStack>
           </Box>
         </HStack>
@@ -81,11 +83,11 @@ function Profile() {
           <Box w="100%" align="center" h="300px" bg="White">
             <Heading mb={4} fontSize="4xl">Friends</Heading>
             <HStack w="75%" justify="center">
-              <Friend001 friend={{name:"John Doe", id:"001"}}/>
+              <OriginalFriend friend={{name:"Justina Doe", id:"001"}}/>
               <Spacer/>
-              <Friend002 friend={{name:"Justina Clark", id:"002"}} />
+              <Friend002 friend={{name:"Matt Doe", id:"002"}} />
               <Spacer/>
-              <Friend003 friend={{name:"Jane Doe", id:"003"}} />
+              <Friend003 friend={{name:"Amber Doe", id:"003"}} />
             </HStack>
           </Box>
         </HStack>
@@ -94,4 +96,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default FriendProfile001;

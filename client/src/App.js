@@ -10,7 +10,9 @@ import Homepage from "./components/Homepage/Homepage";
 import Footer from "./components/Homepage/Footer"
 import LoginForm from "./components/LoginForm";
 import SignupForm from "./components/SignupForm";
-import FriendProfile from "./components/FriendProfile/FriendProfile";
+import FriendProfile001 from "./components/FriendProfile/FriendProfile001";
+import FriendProfile002 from "./components/FriendProfile/FriendProfile002";
+import FriendProfile003 from "./components/FriendProfile/FriendProfile003";
 
 const client = new ApolloClient({ 
   request: (operation) => {
@@ -32,13 +34,15 @@ function App() {
     <ChakraProvider>
     <BrowserRouter>
       <div>
-        <Navbar token={true} />
+        <Navbar token={false} />
         <Routes>
           <Route exact path="/" element={<Homepage/>}/>
           <Route exact path="/profile" element={<Profile/>}/>
           <Route exact path="/LoginForm" element={<LoginForm/>}/>
           <Route exact path="/SignupForm" element={<SignupForm/>}/>
-          <Route exact path="/FriendProfile/:id" element={<FriendProfile/>}/>
+          <Route exact path="/FriendProfile001/:id" element={<FriendProfile001/>}/>
+          <Route exact path="/FriendProfile002/:id" element={<FriendProfile002/>}/>
+          <Route exact path="/FriendProfile003/:id" element={<FriendProfile003/>}/>
         </Routes>
         <Footer />
       </div>
