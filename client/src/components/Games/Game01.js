@@ -4,6 +4,7 @@ import {
   Flex,
   useColorModeValue,
   Heading,
+  Link,
   Text,
   Stack,
   Image,
@@ -14,6 +15,7 @@ const IMAGE =
 
 export default function ProductSimple() {
   return (
+    <Link href="https://store.steampowered.com/app/976730/Halo_The_Master_Chief_Collection/" >
     <Flex py={12}>
       <Box
         position={"relative"}
@@ -65,5 +67,6 @@ export default function ProductSimple() {
         </Stack>
       </Box>
     </Flex>
+    </Link>
   );
 }

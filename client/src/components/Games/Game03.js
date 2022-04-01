@@ -3,6 +3,8 @@ import {
     Center,
     useColorModeValue,
     Heading,
+    Flex,
+    Link,
     Text,
     Stack,
     Image,
@@ -13,8 +15,9 @@ import {
   
   export default function ProductSimple() {
     return (
-      <Center py={12}>
-        <Box
+      <Link href="https://store.steampowered.com/app/1245620/ELDEN_RING/" >
+      <Flex py={12}>        
+      <Box
           role={"group"}
           p={6}
           maxW={"330px"}
@@ -62,6 +65,7 @@ import {
             </Heading>
           </Stack>
         </Box>
-      </Center>
-    );
+        </Flex>
+    </Link>   
+        );
   }
