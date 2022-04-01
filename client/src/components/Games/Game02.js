@@ -4,6 +4,8 @@ import {
     useColorModeValue,
     Heading,
     Text,
+    Link,
+    Flex,
     Stack,
     Image,
   } from "@chakra-ui/react";
@@ -13,8 +15,9 @@ import {
   
   export default function ProductSimple() {
     return (
-      <Center py={12}>
-        <Box
+      <Link href="https://store.steampowered.com/app/952060/Resident_Evil_3/" >
+      <Flex py={12}>
+      <Box
           role={"group"}
           p={6}
           maxW={"330px"}
@@ -62,6 +65,7 @@ import {
             </Heading>
           </Stack>
         </Box>
-      </Center>
+        </Flex>
+    </Link>    
     );
   }
